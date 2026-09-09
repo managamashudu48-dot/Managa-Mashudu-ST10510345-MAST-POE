@@ -46,3 +46,6 @@ Scan the QR code generated in the terminal using the Expo Go app on your physica
 ## Author
 Managa Mashudu
 Student Number: ST10510345
+
+## YouTube Link
+https://youtu.be/NMcr-hYZIJ0?si=kqB3KeRllcvAEaGW
