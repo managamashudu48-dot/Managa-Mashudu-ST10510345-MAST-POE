@@ -18,6 +18,7 @@ type MenuContextType = {
   menuItems: MenuItem[];
   addMenuItem: (item: Omit<MenuItem, 'id'>) => void;
   deleteMenuItem: (id: string) => void;
+  updateMenuItem: (id: string, updatedItem: Omit<MenuItem, 'id'>) => void;
 };
 
 const MenuContext = createContext<MenuContextType | undefined>(undefined);
@@ -34,8 +35,12 @@ export function MenuProvider({ children }: { children: React.ReactNode }) {
     setMenuItems((prev) => prev.filter(item => item.id !== id));
   };
 
+  const updateMenuItem = (id: string, updatedItem: Omit<MenuItem, 'id'>) => {
+    setMenuItems((prev) => prev.map(item => item.id === id ? { ...updatedItem, id } : item));
+  };
+
   return (
-    <MenuContext.Provider value={{ menuItems, addMenuItem, deleteMenuItem }}>
+    <MenuContext.Provider value={{ menuItems, addMenuItem, deleteMenuItem, updateMenuItem }}>
       {children}
     </MenuContext.Provider>
   );
