@@ -2,6 +2,12 @@
 
 A React Native mobile application built to manage and display a restaurant's menu. This application allows users to view a list of dishes, add new items with validation, and seamlessly filter the menu by course or search query.
 
+## Change Log (Updates Since Part 2)
+To fulfill the final requirements, the following features were added:
+- **Manage Menu Items:** Added the ability to edit existing dish details via a dedicated edit screen, and a delete button to remove items from the menu immediately.
+- **Menu Statistics:** Upgraded the bottom dashboard to display dynamic, real-time statistics including the total number of menu items, the average price of all dishes, and a breakdown of item counts by specific courses (Starter, Main, Dessert).
+- **Search and Filter Integration:** Connected the search bar and course dropdown to the global state to instantly filter the displayed menu list.
+
 ## Features
 
 * **Menu Dashboard:** View all dishes in a clean, scrollable list (using `FlatList`) with dynamic styling based on the course type.
